@@ -109,7 +109,10 @@ def fetch_projects(cred):
             # Check for Current Projects
             heading_element = panel.find('h3', class_='panel-title')
             if heading_element and heading_element.text.strip() == "Current projects":
+                
+                # Get Current Projects
                 list_group = panel.find('ul', class_='list-group')
+
                 if list_group:
                     all_projects = list_group.find_all('li', class_='list-group-item')
 
@@ -185,6 +188,7 @@ def fetch_projects(cred):
                     projects['chat_id'] = cred['chat_id']
                 else:
                     projects['Active Projects'] = 0
+                    projects['chat_id'] = cred['chat_id']
 
                 # Return dictionary of projects data
                 return projects
