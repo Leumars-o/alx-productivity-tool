@@ -34,7 +34,7 @@ def send_project(projects):
         elif projects.get('Active Projects') == 1:
             message = f"❕*You Have {projects['Active Projects']} Active Project On The Intranet.*\n\n"
         else:
-            message = f"❕*There Are No Active Projects On The Intranet.*\n\n"
+            message = f"❕*No active project. Enjoy the silence!*\n\n"
             
         # Add project details to message
         if projects.get('Active Projects') > 0:
